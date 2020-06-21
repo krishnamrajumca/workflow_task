@@ -1,0 +1,253 @@
+.App {
+  text-align: center;
+  display:flex;
+  justify-content: center;
+   
+    height: 100vh;
+    
+    .app-body{
+      margin-top: 70px;
+      // height:88vh;
+    }
+  
+}
+.p-inputgroup{
+  border-radius: 4px;
+  border:1px solid #c6c6c6;
+  
+  -webkit-border-radius: 4p;
+  -moz-border-radius: 4p;
+  -ms-border-radius: 4p;
+  -o-border-radius: 4p;
+.p-inputgroup-addon{
+    border-width:0px !important;
+    background-color: white !important; 
+  }
+  .p-inputtext{
+    border-width:0px !important
+  }
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.node-card{
+  position: relative;
+  .circle{
+    position:absolute;
+    height:30px;
+    width:30px;
+    display: flex;
+    top:-15px;
+    right:-15px;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    cursor: pointer;
+    border-radius: 50px;
+    
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+    &.green{
+      background-color:green;
+    }
+    &.blue{
+      background-color: blue;
+    }
+    &.gray{
+      background-color: gray;
+    }
+    i{
+      font-size: 12px;
+    }
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: gray; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b30000; 
+}
+
+.scroll{
+  overflow: auto;
+    height: 73vh;
+    margin-top: 15px
+}
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+.plr0{
+  padding-left: 0;
+  padding-right: 0;
+}
+.p0{
+  padding:0px !important;
+}
+.p20{
+  padding:20px
+}
+.mlr0{
+  margin-left: 0;
+  margin-right: 0;
+}
+.mtb10{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.border-bottom{
+  border-bottom: 1px solid #c6c6c6;
+}
+.flex{
+  display:flex
+}
+.node-card{
+  .p-card-body{
+    padding: 10px 0px;
+  }
+}
+.logout-btn{
+  span{
+    background-color: white;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 12px;
+    cursor: pointer;
+  }
+}
+#login-page{
+  display: flex;
+  justify-content: center;
+  height:100%;
+  .sign_up{
+    color:#12ddff;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  .p-card{
+  border-radius: 5px!important;
+  -webkit-border-radius: 5px!important;
+  -moz-border-radius: 5px!important;
+  -ms-border-radius: 5px!important;
+  -o-border-radius: 5px!important;
+  padding: 20px !important;
+  width:350px;
+}
+}
+.workflow-card{
+  .title{
+    cursor: pointer;
+  }
+  .border-2{
+    border: 2px solid #c6c6c6;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    margin-bottom: 20px;
+}
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  .circle{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+    color:white;
+    &.green{
+      background-color:green;
+    }
+    &.gray{
+       background-color:gray
+    }
+}
+}
+.workflow-card:hover{
+.delete-card{
+  display:flex;
+  position: absolute;
+  top:0px;
+  right: 0px;
+  background-color:red;
+  color:white;
+  width: 25px;
+  height: 25px;
+  border-radius: 50px;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+}
+}
+.delete-card{
+  display: none
+}
+.header{
+  position: absolute;
+    top: 0;
+    height: 60px;
+    background-color: #cd45c5;
+    color:white
+}
