@@ -14,15 +14,12 @@ class Workflow extends PureComponent{
     }
    
     onSearch = (value) => {
-        console.log(value);
         this.setState({searchKey:value.toLocaleLowerCase().trim()})
     }
     onFilter = value => {
-        console.log(value);
         this.setState({filter:value})
     }
     onCreate = () => {
-        console.log("create")
         this.props.history.push('/workflow/create')
     }
     filterData = () => {
@@ -44,7 +41,6 @@ class Workflow extends PureComponent{
         this.props.history.push('/workflow/create',{workflow,index})
     }
     updateStatus = (index) => {
-        console.log(index);
         const { workflows } = this.props;
         let workflow = workflows[index];
         if (workflow.status === WORKFLOW_STATUS[1]) {

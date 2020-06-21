@@ -7,7 +7,6 @@ import { Provider } from 'react-redux';
 import StoreConfig from './store';
 import { PersistGate } from 'redux-persist/integration/react'
 
-console.log("COnfig", StoreConfig)
 
 ReactDOM.render(
   

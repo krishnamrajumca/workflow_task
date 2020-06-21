@@ -25,7 +25,6 @@ class Login extends React.PureComponent{
         }
     }
     login = () => {
-        console.log(this.state);
         if (this.state.isRemember) {
             localStorage.setItem("loginDetails",JSON.stringify(this.state))
         }
@@ -33,7 +32,6 @@ class Login extends React.PureComponent{
         this.props.history.push('/workflow')
     }
     render() {
-        console.log(this.props)
         return(
             <div id="login-page">
                 

@@ -4,7 +4,8 @@ import { InputText } from 'primereact/inputtext';
 import { InputTextarea } from 'primereact/inputtextarea';
 import {NODE_STATUS} from '../reducers/actions'
 const Node = ({ node, callback, index, onChangeStatus }) => {
-    const status = node.status === NODE_STATUS[0] ? "gray" : node.status === [NODE_STATUS[2]] ? "green" : "blue";
+ 
+    const status = node.status === NODE_STATUS[0] ? "gray" : node.status === NODE_STATUS[2] ? "green" : "blue";
     const classname = `circle ${status}`
     const onChangeTitle = (title) => {
         const newNode = { ...node, ...{ title } }

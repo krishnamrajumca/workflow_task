@@ -30,19 +30,22 @@ class CreateWorkFlow extends Component{
         }
         return null
     }
-    shuffle = (array) =>{
-    var currentIndex = array.length, temporaryValue, randomIndex;
+    shuffle = (nodes) => {
+        const temp = JSON.stringify(nodes);
+        var currentIndex = nodes.length, temporaryValue, randomIndex;
 
-    while (0 !== currentIndex) {
-        randomIndex = Math.floor(Math.random() * currentIndex);
-        currentIndex -= 1;
-        temporaryValue = array[currentIndex];
-        array[currentIndex] = array[randomIndex];
-        array[randomIndex] = temporaryValue;
+        while (0 !== currentIndex) {
+            randomIndex = Math.floor(Math.random() * currentIndex);
+            currentIndex -= 1;
+            temporaryValue = nodes[currentIndex];
+            nodes[currentIndex] = nodes[randomIndex];
+            nodes[randomIndex] = temporaryValue;
+        }
+        if (temp === JSON.stringify(nodes)) {
+            return this.shuffle(nodes)
+        }
+        return nodes;
     }
-
-    return array;
-}
 
 
     addNode = () => {
@@ -95,11 +98,10 @@ class CreateWorkFlow extends Component{
         nodes[index] = node;
         this.setState({nodes:nodes})
     }
-    updateStatus = (node,nodes,index) => {
+    updateStatus = (node, nodes, index) => {
         const status = NODE_STATUS[(NODE_STATUS.indexOf(node.status) + 1) % 3];
         const newNode = { ...node, ...{ status } }
         nodes[index] = newNode;
-        
         if (status === NODE_STATUS[0]) {
            
             nodes = nodes.map((node, idx) => {
@@ -111,14 +113,12 @@ class CreateWorkFlow extends Component{
             })
         
         }
-        
-            this.setState({ nodes: nodes })
+        this.setState({ nodes: nodes })
         
         
         
     }
     onChangeStatus = (index) => {
-        
         const nodes = this.state.nodes;
         const preNodes = nodes.slice(0, index)
         const currentNode = nodes[index];
@@ -140,7 +140,6 @@ class CreateWorkFlow extends Component{
         
     }
     render() {
-        // console.log("nodes",this.state)
         const showShuffle = this.state.nodes.length > 1 && this.state.nodes.filter(node => node.status !== NODE_STATUS[2]).length === 0
         return (
             <div>
