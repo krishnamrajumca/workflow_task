@@ -36,5 +36,4 @@ function workflowReducer(state = initialState, action) {
 const rootReducer = combineReducers({
     workflowReducer
   })
-  
   export default rootReducer
