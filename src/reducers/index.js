@@ -2,7 +2,7 @@ import { combineReducers } from 'redux'
 import { ADD_WORKFLOW, LOGIN, LOGOUT, EDIT_WORKFLOW,DELETE_WORKFLOW} from './actions'
 const initialState = {
     workflows: [],
-    loggedIn:true
+    loggedIn:false
 }
 function workflowReducer(state = initialState, action) {
     switch (action.type) {
